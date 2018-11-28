@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="styles/style.css"/> -->
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+	
+	const getData = function(){
+		$.ajax({
+			method: "GET",
+			url: "http://api.pipl.com/search/?first_name=Armand&last_name=Zentil&email=armandzentil@gmail.com&key=BUSINESS-PREMIUM-DEMO-7k1rccoho8a3pb4cuyo82dmb",
+			dataType: "jsonp"
+		}).then(function(response){
+			console.log(response);
+		});
+	};
+
+	getData();
+
+
+
+</script>
+</body>
+</html>
